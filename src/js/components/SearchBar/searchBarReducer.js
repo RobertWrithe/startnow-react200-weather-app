@@ -2,7 +2,7 @@ const defaultState = {
     searchInput: '',
     pending: false,
     history: [],
-    results: {}
+    results: 'none'
 };
 
 export default function SearchBarReducer (state = defaultState, action) {
@@ -32,14 +32,16 @@ export default function SearchBarReducer (state = defaultState, action) {
         case 'GET_WEATHER_PENDING': {
             return {
               ...state,
-              pending: true, 
+              pending: true
             };
         }
 
         case 'GET_WEATHER_REJECTED': {
             return {
               ...state,
-              pending: false, 
+              searchInput: '',
+              pending: false,
+              results: 'fail'
             };
         }
 

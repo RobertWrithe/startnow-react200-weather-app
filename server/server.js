@@ -11,14 +11,13 @@ app.use(express.static('dist'));
 app.use(express.static('public'));
 
 app.get('/api/:search', (req, res) => {
-    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${req.params.search.replace('.', '')}${process.env.WEATHER_API_KEY}`)
+    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${req.params.search.replace('.', '')}${process.env.WEATHER_API_KEY}&units=imperial`)
     .then(response => {
-        console.log('Success: ', response.data);
         res.send(response.data)
     })
     .catch((err) => {
-        console.log('Error: ', err);
-        res.send(err)
+        console.log('Error: ', err.message);
+        res.status(404).send(err.message)
     })
 });
 

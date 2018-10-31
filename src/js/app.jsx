@@ -18,12 +18,8 @@ export default class App extends React.Component {
           </div>
         </div>
         <div className='row'>
-          <div className='col-12 col-md-6 mb-3'>
             <SearchResult />
-          </div>
-          <div className='col-12 col-md-6 mb-3'>
             <SearchHistory />
-          </div>
         </div>
       </div>
     );
