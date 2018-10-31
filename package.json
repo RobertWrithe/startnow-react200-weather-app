@@ -1,7 +1,7 @@
 {
-  "name": "origin-react-starter",
+  "name": "startnow-react200-weather-app",
   "version": "0.1.0",
-  "description": "Base application setup for creating a new react project.",
+  "description": "React/Redux Weather App",
   "main": "server/index.js",
   "scripts": {
     "build": "npm run less && webpack --mode=production",
@@ -43,13 +43,6 @@
     "chai-http": "^4.2.0",
     "csx": "^4.0.0",
     "enzyme": "^2.4.1",
-    "eslint": "^3.15.0",
-    "eslint-config-airbnb": "^12.0.0",
-    "eslint-config-loopback": "^4.0.0",
-    "eslint-plugin-import": "^1.16.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-lodash-fp": "^2.1.3",
-    "eslint-plugin-react": "^6.2.0",
     "file-loader": "^0.11.2",
     "less": "^3.8.1",
     "less-plugin-autoprefix": "^1.5.1",
